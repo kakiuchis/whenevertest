@@ -23,6 +23,6 @@ require File.expand_path(File.dirname(__FILE__) + "/environment")
 set :output, "#{Rails.root}/log/cron.log"
 set :environment, :development if Rails.env.development?
 
-every '* * * * *' do
+every '* 18 * * *' do
   runner "Movie.publish_check"
 end
